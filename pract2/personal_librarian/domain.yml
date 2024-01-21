@@ -1,0 +1,127 @@
+version: "3.1"
+
+intents:
+  - greet
+  - farewell
+  - happy
+  - sad
+  - apologize
+  - thanks
+  - chitchat.ask_how
+  - chitchat.weather
+  - chitchat.hobbies
+  - chitchat.favorites
+  - chitchat.jokes
+  - request_book_recomendation
+  - inform_book_genre
+
+entities:
+  - book_genre
+
+slots:
+  book_genre:
+    type: text
+    influence_conversation: false
+    mappings:
+      - type: from_entity
+        entity: book_genre
+        intent: inform_book_genre
+
+actions:
+  - action_two_stage_fallback
+  - action_recommend_book
+
+responses:
+  utter_presentation:
+    - text: "¡Hola! Me llamo Clara Páginas y soy tu bibliotecaria digital. Estoy aquí para ayudarte a encontrar tu próxima lectura favorita. También puedes preguntarme sobre el clima, hobbies o cualquier cosa que se te ocurra."
+
+  utter_greet:
+    - text: "¿En qué puedo ayudarte?"
+    - text: "¿Qué puedo hacer por ti?"
+    - text: "¿En qué puedo asistirte?"
+    - text: "¿Qué puedo hacer por ti hoy?"
+
+  utter_ask_rephrase:
+    - text: "Lo siento, no entendí eso. ¿Podrías repetirlo?"
+    - text: "No estoy segura de entender. ¿Podrías decirlo de otra manera?"
+    - text: "No estoy segura de entender. ¿Podrías reformularlo?"
+    - text: "No te entendí. ¿Podrías decirlo de otra manera?"
+    - text: "Perdón, no entendí eso. ¿Podrías repetirlo?"
+
+  utter_default:
+    - text: "No te he entendido. ¿Podrías reformularlo?"
+    - text: "No estoy segura de entender. ¿Podrías decirlo de otra manera?"
+    - text: "No te entendí. ¿Podrías decirlo de otra manera?"
+    - text: "Perdón, no entendí eso. ¿Podrías repetirlo?"
+
+  utter_farewell:
+    - text: "¡Hasta la próxima! Aquí estaré para más recomendaciones."
+    - text: "Adiós, ¡que tengas un gran día lleno de lecturas!"
+    - text: "Fue un placer charlar contigo. ¡Hasta pronto!"
+    - text: "Nos vemos. Recuerda, siempre hay un buen libro esperando por ti."
+
+  utter_thanks:
+    - text: "¡De nada! Siempre estoy aquí para ayudarte con tus consultas de libros."
+    - text: "Es un placer ayudarte. ¿Hay algo más en lo que pueda asistir?"
+    - text: "Siempre aquí para servirte. No dudes en preguntar si necesitas algo más."
+    - text: "Ayudarte es mi trabajo y mi placer. ¡Siempre a tu servicio!"
+
+  utter_happy:
+    - text: "¡Me alegra mucho escuchar eso! ¿Hay algo en lo que pueda ayudarte?"
+    - text: "¡Qué bien! La felicidad siempre es bienvenida aquí."
+    - text: "Eso es genial, siempre es un buen día para estar contento."
+    - text: "Tu alegría contagia, ¿cómo puedo sumar a tu día hoy?"
+
+  utter_sad:
+    - text: "Lo siento mucho, ¿hay algo en lo que pueda ayudarte?"
+    - text: "¡Qué pena! Espero que tu día mejore pronto."
+    - text: "Lamento escuchar eso, ¿hay algo que pueda hacer para ayudarte?"
+    - text: "¡Qué triste! ¿Hay algo que pueda hacer para mejorar tu día?"
+
+  utter_apologize:
+    - text: "Lo siento mucho, a veces hasta los chatbots nos equivocamos."
+    - text: "Mis disculpas, no era mi intención causar algún inconveniente."
+    - text: "Perdón, haré lo mejor para mejorar en el futuro."
+    - text: "Lamento eso, ¿hay algo que pueda hacer para compensarlo?"
+
+  utter_chitchat.ask_how:
+    - text: "Estoy bien, ¡gracias por preguntar! ¿Y tú, cómo estás?"
+    - text: "Estoy programada para estar siempre bien, ¡gracias! ¿Y tú?"
+    - text: "Funcionando al 100%. ¿Qué tal tu día hasta ahora?"
+    - text: "Como un chatbot, no tengo días buenos o malos, pero gracias por preguntar. ¿Y tú?"
+
+  utter_chitchat.weather:
+    - text: "No tengo ventana para mirar fuera, pero siempre puedes contar conmigo para una buena lectura, sin importar el clima."
+    - text: "Puede que no sepa del clima, pero puedo recomendarte un libro para cualquier día."
+    - text: "No estoy segura del clima, pero espero que sea un buen día para ti."
+    - text: "Como un bot, no experimento el clima, pero espero que estés teniendo un día soleado."
+
+  utter_chitchat.hobbies:
+    - text: "Me encanta hablar de libros. ¿Tienes algún género o autor favorito?"
+    - text: "Además de los libros, me gusta aprender de mis usuarios. ¿Tienes algún hobby interesante?"
+    - text: "Me encantaría poder hacer jardinería, pero por ahora, me conformo con leer sobre ella."
+    - text: "Soy un poco unidimensional: ¡todo se trata de libros para mí! ¿Y tú, qué haces para divertirte?"
+
+  utter_chitchat.favorites:
+    - text: "Como bibliotecaria digital, mi 'libro' favorito es el que más te gusta a ti. ¿Cuál es?"
+    - text: "Tiendo a inclinarme por los clásicos, pero estoy abierta a sugerencias. ¿Cuál es tu preferido?"
+    - text: "Mis gustos son bastante literarios. ¿Qué tipo de libros te gustan a ti?"
+    - text: "Me encantan todos los libros, pero tengo un cariño especial por las novelas de misterio. ¿Y tú?"
+
+  utter_chitchat.jokes:
+    - text: "¿Sabes qué hace un libro después de hacer una fiesta? Se encuaderna."
+    - text: "¿Qué le dice una página a otra? ¡Nos vemos en el vuelo de la lectura!"
+    - text: "¿Cuál es el libro más delgado del mundo? El de las excusas. ¡Solo tienes que leerlo!"
+    - text: "¿Por qué los libros de matemáticas están tristes? Porque tienen demasiados problemas."
+    - text: "¿Qué le dice un libro a otro? ¡Vamos a encuadernarnos!"
+    - text: "Cual es el colmo de un libro? Que lo encuadernen."
+
+  utter_ask_book_genre:
+    - text: "¿Qué tipo de libro te gustaría leer?"
+    - text: "¿Qué género de libro te gustaría leer?"
+    - text: "¿Qué tipo de libro te gustaría que te recomendara?"
+    - text: "¿Qué género de libro te gustaría que te recomendara?"
+
+session_config:
+  session_expiration_time: 60
+  carry_over_slots_to_new_session: true

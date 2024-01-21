@@ -1,0 +1,32 @@
+version: "3.1"
+
+intents:
+  - saluda
+  - cambio
+
+entities:
+  - canal
+
+slots:
+  canal:
+    type: text
+    initial_value: null
+    mappings:
+    - type: from_entity
+      entity: canal
+
+
+
+responses:
+  utter_hola:
+  - text: "hola"
+
+  utter_cambio:
+  - text: "cambio de canal a {canal}"
+
+session_config:
+  session_expiration_time: 60
+  carry_over_slots_to_new_session: true
+
+config:
+  store_entities_as_slots: true

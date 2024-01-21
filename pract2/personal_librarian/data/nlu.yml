@@ -1,0 +1,150 @@
+version: "3.1"
+
+nlu:
+  - intent: greet
+    examples: |
+      - Hola
+      - Buenos días
+      - Buenas
+      - Buenas tardes
+      - Buenas noches
+      - Hola, ¿qué tal?
+      - Hola, ¿cómo estás?
+      - Hola, ¿qué hay?
+
+  - intent: farewell
+    examples: |
+      - Adiós
+      - Hasta luego
+      - Nos vemos
+      - Hasta pronto
+      - Hasta la próxima
+      - Hasta mañana
+
+  - intent: thanks
+    examples: |
+      - Gracias
+      - Te lo agradezco
+      - Muchas gracias
+      - Gracias por tu ayuda
+      - Gracias por tu tiempo
+      - Gracias por tu atención
+      - Gracias por tu recomendación
+
+  - intent: happy
+    examples: |
+      - Estoy muy contento hoy
+      - ¡Qué gran día!
+      - Me siento genial
+      - Estoy feliz
+      - Me siento bien
+      - Estoy de buen humor
+      - Me siento feliz
+      - Me encanta este libro
+      - Tu recomendación me ha gustado
+      - Me alegro de haber leído este libro
+
+  - intent: sad
+    examples: |
+      - Estoy triste
+      - Me siento mal
+      - No estoy bien
+      - Me siento mal hoy
+      - Me siento triste
+      - Me siento deprimido
+      - Me siento solo
+
+  - intent: apologize
+    examples: |
+      - No era lo que quería
+      - No me gusta
+      - Eso no era lo que esperaba
+      - Te has equivocado
+      - No me gusta eso
+      - No me gusta esta recomendación
+      - No me gusta esta sugerencia
+      - No me gusta este libro
+
+  - intent: chitchat.ask_how
+    examples: |
+      - ¿Cómo estás?
+      - ¿Todo bien?
+      - ¿Qué tal te va?
+      - ¿Cómo te sientes?
+      - ¿Cómo te encuentras?
+      - ¿Cómo te va?
+      - ¿Cómo te ha ido?
+
+  - intent: chitchat.weather
+    examples: |
+      - ¿Qué tal el clima?
+      - ¿Llueve hoy?
+      - ¿Hace sol?
+      - ¿Hace frío?
+      - ¿Hace calor?
+      - ¿Cómo está el clima?
+      - ¿Cómo está el tiempo?
+
+  - intent: chitchat.hobbies
+    examples: |
+      - ¿Qué hobbies tienes?
+      - ¿Qué te gusta hacer?
+      - ¿Tienes alguna afición?
+      - ¿Qué te gusta?
+      - ¿Qué te apasiona?
+      - ¿Qué te interesa?
+      - ¿Qué te entretiene?
+
+  - intent: chitchat.favorites
+    examples: |
+      - ¿Cuales son tus libros favoritos?
+      - ¿Qué libros te gustan?
+      - ¿Qué libros te gustan más?
+      - ¿Qué libros te gustan menos?
+
+  - intent: chitchat.jokes
+    examples: |
+      - Cuéntame un chiste
+      - ¿Sabes algún chiste?
+      - Hazme reír
+      - ¿Tienes algún chiste?
+      - ¿Conoces algún chiste?
+      - ¿Puedes contarme un chiste?
+      - ¿Puedes decirme un chiste?
+
+  - intent: request_book_recomendation
+    examples: |
+      - ¿Qué libro me recomiendas?
+      - Recomiéndame un libro
+      - Quisisera una recomendación de libro
+      - ¿Qué libro me recomiendas leer?
+      - ¿Qué libro me sugieres?
+
+  - intent: inform_book_genre
+    examples: |
+      - Quiero leer un libro de [aventuras](book_genre)
+      - Me gustan los libros de [ciencia ficción](book_genre)
+      - Algo de [fantasía](book_genre) sería genial
+      - Necesito algo de [misterio](book_genre)
+      - [Terror](book_genre)
+      - Mi género favorito es [romance](book_genre)
+      - Me encanta leer [novelas históricas](book_genre)
+      - Siempre prefiero [ciencia ficción](book_genre)
+      - Mi favorito es el [romance](book_genre)
+      - Me interesan los libros de [terror](book_genre)
+      - [Fantasía](book_genre) es lo que más me gusta
+      - Normalmente leo [biografías](book_genre)
+      - Disfruto de la [literatura clásica](book_genre)
+      - Quisiera una recomendación de [novela negra](book_genre)
+      - Me gustan los libros sobre [aventuras](book_genre)
+      - Prefiero [thrillers](book_genre)
+      - [Misterio](book_genre) es mi género preferido
+      - Suelo leer [cómics](book_genre)
+      - Me atraen los libros de [autoayuda](book_genre)
+      - Estoy interesado en [ciencia y tecnología](book_genre)
+      - Quiero algo de [poesía](book_genre)
+      - Busco libros de [viajes](book_genre)
+      - Me gustaría leer algo de [humor](book_genre)
+      - Prefiero los libros de [acción](book_genre)
+      - Me gustan las [novelas de espionaje](book_genre)
+      - Quiero leer sobre [historia](book_genre)

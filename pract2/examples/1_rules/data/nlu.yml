@@ -1,0 +1,22 @@
+version: "3.1"
+
+nlu:
+- intent: bienvenida
+  examples: |
+    - hola
+    - holi
+
+- intent: pide_chiste
+  examples: |
+    - ¿puedes explicarme un chiste?
+    - quiero un chiste
+
+- intent: pide_cuento
+  examples: |
+    - ¿sabes algún cuento?
+    - necesito saber un cuento
+
+- intent: pide_curiosidad
+  examples: |
+    - dime una curiosidad
+    - ¿me puedes explicar una curiosidad?

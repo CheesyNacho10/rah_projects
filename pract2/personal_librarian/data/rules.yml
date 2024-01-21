@@ -1,0 +1,38 @@
+version: "3.1"
+rules:
+  - rule: Standard greeting
+    steps:
+      - intent: greet
+      - action: utter_presentation
+      - action: utter_greet
+
+  - rule: Implementation of the Two-Stage-Fallback
+    steps:
+    - intent: nlu_fallback
+    - action: action_two_stage_fallback
+    - active_loop: action_two_stage_fallback
+
+  - rule: Standard farewell
+    steps:
+      - intent: farewell
+      - action: utter_farewell
+
+  - rule: Happy reaction
+    steps:
+      - intent: happy
+      - action: utter_happy
+
+  - rule: Sad reaction
+    steps:
+      - intent: sad
+      - action: utter_sad
+
+  - rule: Thanks reaction
+    steps:
+      - intent: thanks
+      - action: utter_thanks
+
+  - rule: Apologize reaction
+    steps:
+      - intent: apologize
+      - action: utter_apologize

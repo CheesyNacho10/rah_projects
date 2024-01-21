@@ -1,0 +1,21 @@
+version: "3.1"
+
+nlu:
+
+- intent: saluda
+  examples: |
+    - hola
+    - ¿qué tal?
+
+- intent: cambio
+  examples: |
+    - pon [la primera]{"entity": "canal", "value": "La1"}
+    - pon [la catalana]{"entity": "canal", "value": "TV3"}
+    - cambia a [la sexta]{"entity": "canal", "value": "LaSexta"}
+
+- synonym: La1
+  examples: |
+    - la primera
+    - televisión española
+    - la uno
+    - la 1

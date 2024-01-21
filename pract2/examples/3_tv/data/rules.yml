@@ -1,0 +1,13 @@
+version: "3.1"
+
+rules:
+
+- rule: cambiazo
+  steps:
+  - intent: cambio
+  - action: utter_cambio
+
+- rule: saludo
+  steps:
+  - intent: saluda
+  - action: utter_hola

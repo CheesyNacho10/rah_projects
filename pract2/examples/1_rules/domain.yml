@@ -1,0 +1,26 @@
+version: "3.1"
+
+intents:
+  - bienvenida
+  - pide_ayuda
+  - pide_chiste
+  - pide_cuento
+  - pide_curiosidad
+
+responses:
+  utter_ayuda:
+  - text: "Hola, ¿en qué puedo ayudarte? se contar chistes historias y curiosidades"
+
+  utter_chiste:
+  - text: "Van dos y cae el del medio, tachín!"
+  
+  utter_cuento:
+  - text: "Chuang Tzu soñó que era una mariposa. Al despertar ignoraba si era Tzu que había soñado que era una mariposa o si era una mariposa y estaba soñando que era Tzu."
+
+  utter_curiosidad:
+  - text: "Los tigres a los 2 años estan listos para separarse de la madre"
+    image: "https://i.imgur.com/nGF1K8f.jpg"
+
+session_config:
+  session_expiration_time: 60
+  carry_over_slots_to_new_session: true

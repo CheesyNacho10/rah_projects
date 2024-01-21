@@ -1,0 +1,152 @@
+version: "3.1"
+stories:
+  - story: happy greeting
+    steps:
+      - intent: greet
+      - action: utter_presentation
+      - action: utter_greet
+      - intent: happy
+      - action: utter_happy
+
+  - story: sad greeting
+    steps:
+      - intent: farewell
+      - action: utter_farewell
+      - intent: sad
+      - action: utter_sad
+    
+  - story: happy greeting and weather
+    steps:
+      - intent: greet
+      - action: utter_presentation
+      - action: utter_greet
+      - intent: happy
+      - action: utter_happy
+      - intent: chitchat.weather
+      - action: utter_chitchat.weather
+
+  - story: sad greeting and weather
+    steps:
+      - intent: farewell
+      - action: utter_farewell
+      - intent: sad
+      - action: utter_sad
+      - intent: chitchat.weather
+      - action: utter_chitchat.weather
+
+  - story: greeting and hobbies
+    steps:
+      - intent: greet
+      - action: utter_presentation
+      - action: utter_greet
+      - intent: chitchat.hobbies
+      - action: utter_chitchat.hobbies
+
+  - story: greeting and weather
+    steps:
+      - intent: greet
+      - action: utter_presentation
+      - action: utter_greet
+      - intent: chitchat.weather
+      - action: utter_chitchat.weather
+
+  - story: greeting and favorites
+    steps:
+      - intent: greet
+      - action: utter_presentation
+      - action: utter_greet
+      - intent: chitchat.favorites
+      - action: utter_chitchat.favorites
+
+  - story: general chitchat
+    steps:
+      - intent: chitchat.ask_how
+      - action: utter_chitchat.ask_how
+      - intent: chitchat.weather
+      - action: utter_chitchat.weather
+      - intent: chitchat.jokes
+      - action: utter_chitchat.jokes
+
+  - story: gratitude and jokes
+    steps:
+      - intent: thanks
+      - action: utter_thanks
+      - intent: chitchat.jokes
+      - action: utter_chitchat.jokes
+
+  - story: hobby followed by favorites
+    steps:
+      - intent: chitchat.hobbies
+      - action: utter_chitchat.hobbies
+      - intent: chitchat.favorites
+      - action: utter_chitchat.favorites
+
+  - story: weather inquiry and farewell
+    steps:
+      - intent: chitchat.weather
+      - action: utter_chitchat.weather
+      - intent: farewell
+      - action: utter_farewell
+
+  - story: greeting followed by apology
+    steps:
+      - intent: greet
+      - action: utter_presentation
+      - action: utter_greet
+      - intent: apologize
+      - action: utter_apologize
+
+  - story: sad mood and chitchat
+    steps:
+      - intent: sad
+      - action: utter_sad
+      - intent: chitchat.ask_how
+      - action: utter_chitchat.ask_how
+
+  - story: varied conversation
+    steps:
+      - intent: greet
+      - action: utter_presentation
+      - action: utter_greet
+      - intent: chitchat.weather
+      - action: utter_chitchat.weather
+      - intent: chitchat.jokes
+      - action: utter_chitchat.jokes
+      - intent: farewell
+      - action: utter_farewell
+
+  - story: book recommendation - mystery
+    steps:
+    - intent: greet
+    - action: utter_presentation
+    - action: utter_greet
+    - intent: request_book_recomendation
+    - action: utter_ask_book_genre
+    - intent: inform_book_genre
+      entities:
+        - book_genre: "misterio"
+    - action: action_recommend_book
+
+  - story: book recommendation - romance
+    steps:
+    - intent: greet
+    - action: utter_presentation
+    - action: utter_greet
+    - intent: request_book_recomendation
+    - action: utter_ask_book_genre
+    - intent: inform_book_genre
+      entities:
+        - book_genre: "romance"
+    - action: action_recommend_book
+
+  - story: book recommendation - another recommendation
+    steps:
+    - intent: greet
+    - action: utter_presentation
+    - action: utter_greet
+    - intent: request_book_recomendation
+    - action: utter_ask_book_genre
+    - intent: inform_book_genre
+      entities:
+        - book_genre: "ciencia"
+    - action: action_recommend_book

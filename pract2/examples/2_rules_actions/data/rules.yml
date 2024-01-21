@@ -1,0 +1,25 @@
+version: "3.1"
+
+rules:
+
+- rule: ayuda
+  steps:
+  - intent: bienvenida
+  - action: utter_ayuda
+
+- rule: contar un chiste
+  steps:
+  - intent: pide_chiste
+  - action: action_elige_chiste
+
+- rule: contar un cuento
+  steps:
+  - intent: pide_cuento
+  - action: utter_cuento
+
+- rule: contar una curiosidad
+  steps:
+  - intent: pide_curiosidad
+  - action: utter_curiosidad
+
+  
